@@ -11,6 +11,7 @@ export class ProductComponent implements OnInit {
   pageTitle: string = "Acme product management";
   imageWidth: number=50;
   imageMargin: number=2;
+  showImage: boolean=true;
 
   products: Product[]=[
     {
@@ -64,6 +65,10 @@ export class ProductComponent implements OnInit {
       "imageUrl": "assets/images/xbox-controller.png"
     }
   ]
+
+  displayImage(): void{
+    this.showImage = !this.showImage;
+  }
 
   constructor() { }
 
