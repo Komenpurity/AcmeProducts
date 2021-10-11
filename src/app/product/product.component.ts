@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Product } from '../product';
 
 @Component({
   selector: 'app-product',
@@ -8,8 +9,10 @@ import { Component, OnInit } from '@angular/core';
 export class ProductComponent implements OnInit {
 
   pageTitle: string = "Acme product management";
+  imageWidth: number=50;
+  imageMargin: number=2;
 
-  products: any[]=[
+  products: Product[]=[
     {
       "productId": 1,
       "productName": "Leaf Rake",
