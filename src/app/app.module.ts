@@ -22,7 +22,13 @@ import { RouterModule } from '@angular/router';
   imports: [
     BrowserModule,
     FormsModule,
-    RouterModule.forRoot([])
+    RouterModule.forRoot([
+      { path: 'product', component: ProductComponent},
+      {path: 'product/:id', component: ProductDetailComponent},
+      { path: 'welcome', component: WelcomeComponent},
+      {path: '', redirectTo:'welcome', pathMatch:'full'},
+      {path:"**",redirectTo:"welcome",pathMatch:"full"}
+    ])
   ],
   providers: [],
   bootstrap: [AppComponent]
