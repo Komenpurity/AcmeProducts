@@ -6,7 +6,9 @@ import { AppComponent } from './app.component';
 import { ProductComponent } from './product/product.component';
 import { ConvertSpacesPipe } from './convert-spaces.pipe';
 import { StarComponent } from './star/star.component';
+import { WelcomeComponent } from './home/welcome.component'
 import { ProductDetailComponent } from './product/product-detail/product-detail.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -14,11 +16,13 @@ import { ProductDetailComponent } from './product/product-detail/product-detail.
     ProductComponent,
     ConvertSpacesPipe,
     StarComponent,
-    ProductDetailComponent
+    ProductDetailComponent,
+    WelcomeComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    RouterModule.forRoot([])
   ],
   providers: [],
   bootstrap: [AppComponent]
